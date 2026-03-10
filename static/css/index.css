@@ -290,6 +290,65 @@ body {
   font-weight: 500;
 }
 
+/* Video Carousel - Real World Inference */
+.video-carousel-section {
+  position: relative;
+}
+
+.video-carousel-section .video-carousel-caption {
+  margin-bottom: 1.5rem;
+}
+
+.video-carousel-section .video-carousel {
+  position: relative;
+  padding: 0 3.5rem; /* 为左右按钮留出空间 */
+}
+
+.video-carousel-section .slider {
+  position: relative;
+}
+
+.video-carousel-section .slider-navigation-previous,
+.video-carousel-section .slider-navigation-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.video-carousel-section .slider-navigation-previous:hover,
+.video-carousel-section .slider-navigation-next:hover {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.video-carousel-section .slider-navigation-previous {
+  left: 0;
+}
+
+.video-carousel-section .slider-navigation-next {
+  right: 0;
+}
+
+.video-carousel-section .slider-navigation-previous svg,
+.video-carousel-section .slider-navigation-next svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* Pagination and Misc Improvements */
 .slider-pagination .slider-page {
   background: var(--primary-color);

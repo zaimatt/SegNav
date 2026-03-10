@@ -173,53 +173,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -228,7 +181,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">SegNav: A Two-Stage Learning Framework for Robust Sim-to-Real Visual Navigation</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -301,133 +254,93 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/1.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <h2 class="title is-3 has-text-centered">🔥 Highlights</h2>
+    <div class="content" style="max-width: 700px; margin: 0 auto;">
+      <ol type="1" style="text-align: left; line-height: 1.6;">
+
+        <li style="margin-bottom: 1.8rem;">
+          <h4 class="title is-5" style="margin-bottom: 0.4rem;">Zero-Shot RGB-Only Avoidance</h4>
+          SegNav achieves robust <span style="color: #669900;">obstacle avoidance</span> in real-world environments using only a single RGB camera. It demonstrates strong generalization to <span style="color: #669900;">unseen objects</span> without requiring depth sensors.
+        </li>
+
+        <li style="margin-bottom: 1.8rem;">
+          <h4 class="title is-5" style="margin-bottom: 0.4rem;">Planning-Free End-to-End Control</h4>
+          Our <span style="color: #669900;">imitation learning policy</span> directly maps visual inputs to velocities. This end-to-end pipeline eliminates traditional planning modules, resulting in more <span style="color: #669900;">responsive control</span> for quadrupedal robots.
+        </li>
+
+        <li style="margin-bottom: 1.8rem;">
+          <h4 class="title is-5" style="margin-bottom: 0.4rem;">Lightweight Edge Real-Time Inference</h4>
+          The model is only <span style="color: #669900;">34MB</span> and optimized via TensorRT. It maintains a <span style="color: #669900;">~10Hz inference rate</span> on the <span style="color: #669900;">NVIDIA Jetson Orin Nano</span>, making it ideal for resource-constrained edge devices.
+        </li>
+
+        <li style="margin-bottom: 1.8rem;">
+          <h4 class="title is-5" style="margin-bottom: 0.4rem;">Sample-Efficient Hybrid Data Strategy</h4>
+          Our strategy requires <span style="color: #669900;">less than 10 hours</span> of human-teleoperated data. By leveraging large-scale <span style="color: #669900;">HM3D simulation data</span>, we effectively bridge the sim-to-real gap with minimal real-world collection.
+        </li>
+
+      </ol>
     </div>
   </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+</div>
 
 
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+        
+        <div class="item">
+          <img src="static/images/model.png" alt="SegNav Model Architecture" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            <b>SegNav Model Architecture.
+          </h2>
         </div>
+
+        <div class="item">
+          <img src="static/images/tensorrt.png" alt="Real Time Inference" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            <b>Quantitative evaluation:</b> Real-time inference with TensorRT. Test on NX Orin Nano.
+          </h2>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<section class="hero is-small video-carousel-section">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
+      <h2 class="title is-3 video-carousel-caption">Real World Inference</h2>
+      <div id="video-carousel" class="carousel results-carousel video-carousel">
         <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+          <video poster="" id="video1" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/1.mp4" type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">Generalization to Unseen Obstacles in Real-world Environments</h2>
         </div>
         <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
+          <video poster="" id="video2" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/2.mp4" type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">Generalization to Unseen Obstacles in Real-world Environments</h2>
         </div>
         <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
+          <video poster="" id="video3" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/3.mp4" type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">Generalization to Unseen Obstacles in Real-world Environments</h2>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/long.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Long-horizon Navigation</h2>
         </div>
       </div>
     </div>
@@ -437,46 +350,87 @@
 
 
 
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- Video carousel -->
+<section class="hero is-small video-carousel-section">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <h2 class="title is-3 video-carousel-caption">Ego View</h2>
+      <div id="video-carousel" class="carousel results-carousel video-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/dog_inference_web.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/dog_inference_long_web.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
+  </div>
 </section>
-<!--End BibTex citation -->
+<!-- End video carousel -->
+
+<!-- Video carousel -->
+<section class="hero is-small video-carousel-section">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 video-carousel-caption">Simulation Results</h2>
+      <div class="content has-text-centered">
+        <p style="font-size: 1.1rem; color: #5a5a5a; margin-bottom: 20px;">
+          Our model is trained on the HM3D <b>training split</b> and evaluated on <b>unseen scenes</b> from the <b>held-out evaluation split</b> to demonstrate generalization capability.
+        </p>
+      </div>
+      <div id="video-carousel" class="carousel results-carousel video-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim0.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 1</h2>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 2</h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim3.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 3</h2>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim4.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 4</h2>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim5.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 5</h2>
+        </div>
+        <div class="item item-video6">
+          <video poster="" id="video6" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim6.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 6</h2>
+        </div>
+        <div class="item item-video7">
+          <video poster="" id="video7" controls muted  height="100%" preload="metadata">
+            <source src="static/videos/sim7.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">Sim 7</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
 
 
   <footer class="footer">
